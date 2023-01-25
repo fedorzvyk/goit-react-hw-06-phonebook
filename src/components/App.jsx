@@ -4,7 +4,6 @@ import Filter from 'components/Filter/Filter';
 import { Box } from '../commonStyles/Box';
 
 export default function App() {
-
   return (
     <Box
       display="flex"
@@ -29,7 +28,7 @@ export default function App() {
         as="section"
       >
         <h1>Phonebook</h1>
-        <ContactForm/>
+        <ContactForm />
       </Box>
       <Box
         display="flex"

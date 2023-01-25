@@ -5,8 +5,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
 import PropTypes from 'prop-types';
 
-const ContactListItem = ({ id, number, name, onDelete }) => {
-
+const ContactListItem = ({ id, number, name }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,10 +16,7 @@ const ContactListItem = ({ id, number, name, onDelete }) => {
       <span>
         <FaPhoneAlt fill="orange" /> {number}
       </span>
-      <Button
-        type="button"
-        onClick={() => dispatch(deleteContact(id))}
-      >
+      <Button type="button" onClick={() => dispatch(deleteContact(id))}>
         <FaTrash /> Delete
       </Button>
     </Item>

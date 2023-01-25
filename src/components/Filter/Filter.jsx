@@ -1,6 +1,6 @@
 import { Input, Label } from 'commonStyles/coommonStyles.styled';
-import { useDispatch} from 'react-redux';
-import{setFilter} from 'redux/filterSlice'
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
@@ -19,6 +19,5 @@ const Filter = () => {
     </Label>
   );
 };
-
 
 export default Filter;
