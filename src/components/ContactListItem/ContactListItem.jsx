@@ -1,8 +1,13 @@
 import { Button } from 'commonStyles/coommonStyles.styled';
 import { Item, ItemName } from './ContactListItem.styled';
 import { FaPhoneAlt, FaUserAlt, FaTrash } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from 'redux/contactsSlice';
 
 const ContactListItem = ({ id, number, name, onDelete }) => {
+
+  const dispatch = useDispatch();
+
   return (
     <Item key={id}>
       <ItemName>
@@ -13,9 +18,7 @@ const ContactListItem = ({ id, number, name, onDelete }) => {
       </span>
       <Button
         type="button"
-        onClick={() => {
-          onDelete(id);
-        }}
+        onClick={() => dispatch(deleteContact(id))}
       >
         <FaTrash /> Delete
       </Button>
