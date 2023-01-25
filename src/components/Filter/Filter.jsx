@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { Input, Label } from 'commonStyles/coommonStyles.styled';
 import { useDispatch} from 'react-redux';
 import{setFilter} from 'redux/filterSlice'
@@ -21,9 +20,5 @@ const Filter = () => {
   );
 };
 
-// Filter.propTypes = {
-//   filter: PropTypes.string.isRequired,
-//   onFilter: PropTypes.func.isRequired,
-// };
 
 export default Filter;

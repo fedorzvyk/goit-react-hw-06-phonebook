@@ -3,6 +3,7 @@ import { Item, ItemName } from './ContactListItem.styled';
 import { FaPhoneAlt, FaUserAlt, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contactsSlice';
+import PropTypes from 'prop-types';
 
 const ContactListItem = ({ id, number, name, onDelete }) => {
 
@@ -24,6 +25,12 @@ const ContactListItem = ({ id, number, name, onDelete }) => {
       </Button>
     </Item>
   );
+};
+
+ContactListItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };
 
 export default ContactListItem;

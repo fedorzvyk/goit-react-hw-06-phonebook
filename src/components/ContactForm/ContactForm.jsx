@@ -1,5 +1,4 @@
 
-// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import {addContact} from 'redux/contactsSlice';
 import {getContacts} from 'redux/selectors'
@@ -10,9 +9,9 @@ import { FaPhoneSquareAlt } from 'react-icons/fa';
 
 
 export default function ContactForm() {
-  const contacts = useSelector(getContacts);
+  const {contacts} = useSelector(getContacts);
   const dispatch = useDispatch();
- 
+//  console.log('first')
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -59,6 +58,3 @@ export default function ContactForm() {
   );
 }
 
-// ContactForm.propTypes = {
-//   onFormSubmit: PropTypes.func.isRequired,
-// };
